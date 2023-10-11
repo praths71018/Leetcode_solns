@@ -1,4 +1,4 @@
-// My Solution
+// My Solution (Constraint: Can't convert integer to string)
 bool isPalindrome(int x){
     if(x<0)
     {
