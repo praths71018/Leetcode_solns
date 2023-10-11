@@ -20,42 +20,42 @@ char* mergeAlternately(char* word1, char* word2) {
 }
 
 // My Solution
-// char * mergeAlternately(char * word1, char * word2){
-//     char * word3=calloc(1000,sizeof(char));
-//     int track=0;
-//     int len=0;
-//     if(strlen(word1)>strlen(word2)){
-//         for(int i=0;i<strlen(word2);i++){
-//             word3[len]=word1[i];
-//             word3[len+1]=word2[i];
-//             len+=2;
-//             track++;
-//         }
-//         for(int i=track;i<strlen(word1);i++)
-//         {
-//             word3[len]=word1[i];
-//             len++;
-//         }
-//     }
-//     else if(strlen(word2)>strlen(word1)){
-//         for(int i=0;i<strlen(word1);i++){
-//             word3[len]=word1[i];
-//             word3[len+1]=word2[i];
-//             len+=2;
-//             track++;
-//         }
-//         for(int i=track;i<strlen(word2);i++)
-//         {
-//             word3[len]=word2[i];
-//             len++;
-//         }
-//     }
-//     else{
-//         for(int i=0;i<strlen(word1);i++){
-//             word3[len]=word1[i];
-//             word3[len+1]=word2[i];
-//             len+=2;
-//         }
-//     }
-//     return word3;
-// }
+char * mergeAlternately(char * word1, char * word2){
+    char * word3=calloc(1000,sizeof(char));
+    int track=0;
+    int len=0;
+    if(strlen(word1)>strlen(word2)){
+        for(int i=0;i<strlen(word2);i++){
+            word3[len]=word1[i];
+            word3[len+1]=word2[i];
+            len+=2;
+            track++;
+        }
+        for(int i=track;i<strlen(word1);i++)
+        {
+            word3[len]=word1[i];
+            len++;
+        }
+    }
+    else if(strlen(word2)>strlen(word1)){
+        for(int i=0;i<strlen(word1);i++){
+            word3[len]=word1[i];
+            word3[len+1]=word2[i];
+            len+=2;
+            track++;
+        }
+        for(int i=track;i<strlen(word2);i++)
+        {
+            word3[len]=word2[i];
+            len++;
+        }
+    }
+    else{
+        for(int i=0;i<strlen(word1);i++){
+            word3[len]=word1[i];
+            word3[len+1]=word2[i];
+            len+=2;
+        }
+    }
+    return word3;
+}
