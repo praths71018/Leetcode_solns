@@ -17,6 +17,8 @@ private:
             return;
         }
         comb.push_back(candidates[i]);
+        // keep adding candidates[i] in total until total== target, if total > target pop
+        // last element in comb and add next element and recurse all over till total== target or total > target
         makeCombination(candidates,target,i,comb,total+candidates[i],res);
         comb.pop_back();
         makeCombination(candidates,target,i+1,comb,total,res);
